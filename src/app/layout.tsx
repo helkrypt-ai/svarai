@@ -5,8 +5,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'SvarAI — AI-drevet e-postsvar for norske SMBer',
-  description: 'La AI svare på e-postene dine automatisk. SvarAI hjelper norske bedrifter spare tid og forbedre kundeservice.',
+  title: 'SvarAI — AI-chatbot for norske SMBer',
+  description: 'Legg en AI-chatbot på nettsiden din på 5 minutter. SvarAI svarer kundehenvendelser automatisk, hele døgnet. Ingen koding nødvendig.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
