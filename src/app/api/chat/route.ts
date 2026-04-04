@@ -81,7 +81,18 @@ async function persistMessages(
   messages: ChatMessage[],
   reply: string
 ) {
-  let conversationId = existingConversationId
+  let conversationId: string | null = null
+
+  // Validate that the provided conversationId belongs to this org before reusing it
+  if (existingConversationId) {
+    const { data: existing } = await admin
+      .from('conversations')
+      .select('id')
+      .eq('id', existingConversationId)
+      .eq('org_id', orgId)
+      .single()
+    if (existing) conversationId = existingConversationId
+  }
 
   if (!conversationId) {
     const { data: conv } = await admin
