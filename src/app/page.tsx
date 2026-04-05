@@ -327,10 +327,11 @@ export default function Home() {
           <span className="text-xl font-bold text-blue-600">SvarAI</span>
           <div className="flex items-center gap-6 text-sm text-gray-500">
             <Link href="/pricing" className="hover:text-gray-700">Priser</Link>
-            <Link href="/privacy" className="hover:text-gray-700">Personvern</Link>
+            <Link href="/privacy" className="hover:text-gray-700">Privacy Policy</Link>
+            <Link href="/personvern" className="hover:text-gray-700">Personvernerklæring</Link>
             <Link href="/login" className="hover:text-gray-700">Logg inn</Link>
           </div>
-          <p className="text-sm text-gray-400">© 2025 SvarAI</p>
+          <p className="text-sm text-gray-400">© {new Date().getFullYear()} Helkrypt AI AS</p>
         </div>
       </footer>
     </main>
